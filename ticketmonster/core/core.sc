@@ -8,6 +8,8 @@ ticketmonster.core {
       definesSrc = false;
       definesClasses = false;
 
+      // Defining the sub-package as a relative path inside of the above
+      // ticket-monster main.  This is where the maven definition lives.
       object demoPkg extends MvnRepositoryPackage {
          url = "demo"; 
 
