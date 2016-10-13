@@ -10,6 +10,8 @@ hazelcast {
       // osgi at least is required for compiling and it's marked as optional
       includeOptional = true;
 
+      useRepositories = true;
+
       excludeModules = {"hazelcast-build-utils"};
    }
 }
