@@ -43,7 +43,7 @@ public wicket.core extends meta, util {
 
       // Tells the system to regenerate web.xml when the set of wicketApplications changes
       if (activated)
-         system.addTypeGroupDependency("web/WEB-INF/web.scxml", "web.WEB-INF.web", "wicketApplications");
+         addTypeGroupDependency("web/WEB-INF/web.scxml", "web.WEB-INF.web", "wicketApplications");
 
       // Note: this sets the templatePrefix for all web files since there's one processor used for all of them.
       sc.layer.LayerFileProcessor webProc = (sc.layer.LayerFileProcessor) system.getFileProcessorForExtension("css");
