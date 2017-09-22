@@ -9,7 +9,7 @@ import org.apache.wicket.request.IRequestCycleProcessor;
 
 import java.util.Map;
 
-@CompilerSettings(needsCompiledClass=true)
+@CompilerSettings(needsCompiledClass=true, liveDynamicTypes=true)
 class WicketApplication extends WebApplication {
    private Class homePage;
 
