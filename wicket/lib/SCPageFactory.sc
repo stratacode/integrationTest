@@ -11,7 +11,7 @@ class SCPageFactory implements IPageFactory {
    <C extends Page> Page newPage(final Class<C> pageClass) {
       // Done in the resolve method of RequestProcessor
       //DynUtil.refreshType(TypeUtil.getTypeName(pageClass, false));
-      if (IComponent.class.isAssignableFrom(pageClass))
+      if (DynUtil.isComponentType(pageClass))
          return (Page) RTypeUtil.newComponent(pageClass);
       else
          return def.newPage(pageClass);
@@ -20,7 +20,7 @@ class SCPageFactory implements IPageFactory {
    <C extends Page> Page newPage(final Class<C> pageClass, PageParameters parameters) {
       // Done in the resolve method of RequestProcessor
       //DynUtil.refreshType(TypeUtil.getTypeName(pageClass, false));
-      if (IComponent.class.isAssignableFrom(pageClass))
+      if (DynUtil.isComponentType(pageClass))
          return (Page) RTypeUtil.newComponent(pageClass, parameters.values().toArray());
       else
          return def.newPage(pageClass);
