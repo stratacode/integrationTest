@@ -48,7 +48,7 @@ import org.apache.wicket.util.resource.*;
 
 import org.apache.wicket.settings.*;
 
-public wicket.lib extends jetty.servlet, lang, log4j {
+public wicket.lib extends jetty.servlet, lang, log4j.core {
    compiledOnly = true;
    //classPath=sc.util.FileUtil.listFiles(getRelativeFile("./lib"),".*\\.jar");
 
