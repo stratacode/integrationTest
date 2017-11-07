@@ -1,0 +1,2 @@
+System.out.println("*** Wicket test running");
+cmd.sleep(5000);
