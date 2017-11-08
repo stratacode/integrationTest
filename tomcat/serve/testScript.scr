@@ -1,0 +1,3 @@
+System.out.println("*** Tomcat test running");
+// TODO: should we open headless chrome and grab the dom here?
+cmd.sleep(5000);
