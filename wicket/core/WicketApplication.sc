@@ -29,7 +29,7 @@ class WicketApplication extends WebApplication {
    public static void queueEvents() {
       if (BindingContext.getBindingContext() != null) 
          throw new IllegalArgumentException("queueEvents called when it is already enabled");
-      BindingContext ctx = new BindingContext();
+      BindingContext ctx = new BindingContext(IListener.SyncType.QUEUED);
       BindingContext.setBindingContext(ctx);
    }
    
