@@ -37,7 +37,7 @@ public gwt.main extends lib, meta, jreStub {
             "     if (!first) { %> <% } first = false; %><%= gwtModule.typeName %><% " +
             "  } %>]"
          };
-         system.buildInfo.addMainCommand(this, "com.google.gwt.dev.DevMode", "StrataCodeGWT", mainArgs);
+         system.buildInfo.addMainCommand(this, "com.google.gwt.dev.DevMode", "StrataCodeGWT", mainArgs, null);
       }
 
       // Turn off compilation since we need to use gwt to do this. 
