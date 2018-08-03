@@ -14,6 +14,8 @@ test.petclinic extends spring.example.petclinic, junit.main, tomcat.disableServe
 
    public void start() {
       RepositoryPackage pkg = getRepositoryPackage("spring-petclinic");
-      srcPath = FileUtil.concat(pkg.installedRoot, "src", "test", "java");
+      String testSrc = FileUtil.concat(pkg.installedRoot, "src", "test");
+      srcPath = FileUtil.concat(testSrc, "java") + FileUtil.PATH_SEPARATOR + 
+                FileUtil.concat(testSrc, "resources");
    }
 }

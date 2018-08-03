@@ -6,6 +6,5 @@ import sc.example.quiz.*;
 import sc.example.quiz.wicket.OnclickConfirmation;
 
 public example.quiz.wicket.makequiz extends example.quiz.wicket.persist {
-   codeType = sc.layer.CodeType.Application;
-   codeFunction = sc.layer.CodeFunction.UI;
+   codeType = CodeType.Application;
 }
