@@ -1,5 +1,5 @@
 package sc.tomcat;
-tomcat.lib extends log4j {
+tomcat.lib extends log4j.core {
    compiledOnly = true;
 
    codeType = sc.layer.CodeType.Framework;
