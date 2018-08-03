@@ -2,10 +2,9 @@ package sc.tomcat;
 tomcat.lib extends log4j.core {
    compiledOnly = true;
 
-   codeType = sc.layer.CodeType.Framework;
-   codeFunction = sc.layer.CodeFunction.Program;
+   codeType = CodeType.Framework;
 
-   String tomcatVersion = "7.0.47";
+   String tomcatVersion = "8.5.11";
 
    public void init() {
       // Exclude the javascript, android, and gwt runtimes.  All layers which extend this layer explicitly will also be excluded, unless they explicitly include a layer which uses JS
