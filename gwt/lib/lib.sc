@@ -10,7 +10,7 @@ gwt.lib extends servlet.webAppBuild, gwt.lang {
    disabled = true;
 
    public void init() {
-      createDefaultRuntime("gwt");
+      createDefaultRuntime("gwt", false);
    }
 
    public void start() {

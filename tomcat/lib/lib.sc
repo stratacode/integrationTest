@@ -10,7 +10,7 @@ tomcat.lib extends log4j.core {
       // Exclude the javascript, android, and gwt runtimes.  All layers which extend this layer explicitly will also be excluded, unless they explicitly include a layer which uses JS
       excludeRuntimes("js", "android", "gwt");
 
-      addProcess(sc.layer.ProcessDefinition.create("Server"));
+      addProcess(sc.layer.ProcessDefinition.create("Server", "java", true));
    }
 
    public void start() {
