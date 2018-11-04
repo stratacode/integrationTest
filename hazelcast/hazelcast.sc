@@ -2,7 +2,7 @@ hazelcast {
    object hazelcastPkg extends MvnRepositoryPackage {
       packageName = "hazelcast";
       type = "git-mvn";
-      url = "git@github.com:hazelcast/hazelcast.git";
+      url = "https://github.com/hazelcast/hazelcast.git";
 
       srcPaths = {"src/main/java", "src/main/resources"};
 

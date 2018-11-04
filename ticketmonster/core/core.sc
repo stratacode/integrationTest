@@ -2,7 +2,7 @@ ticketmonster.core {
    object ticketMonsterPkg extends RepositoryPackage {
       packageName = "ticketmonster";
       type = "git";
-      url = "git@github.com:jboss-developer/ticket-monster.git";
+      url = "https://github.com/jboss-developer/ticket-monster.git";
 
       // No src for this package - only subpackages
       definesSrc = false;

@@ -18,7 +18,7 @@ spring.example.petclinic extends tomcat.servlet, spring.std {
       // The git-mvn repository uses git to check out the src, 
       // and maven to get the dependencies
       type = "git-mvn";
-      url = "git@github.com:spring-projects/spring-petclinic.git";
+      url = "https://github.com/spring-projects/spring-petclinic.git";
 
       // Include maven dependencies marked <scope>runtime</scope>
       includeRuntime = true;
