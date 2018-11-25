@@ -25,10 +25,12 @@
             if (_child instanceof org.apache.wicket.behavior.IBehavior)
                <%=lowerClassName%>.add((org.apache.wicket.behavior.IBehavior) _child);
          }
-      <% } %>
-      return _t;
-  }
-  else 
-     return <%=lowerClassName%>;
+       <% } %>
+       return _t;
+   }
+   else {
+      <%=variableTypeName%> _<%=lowerClassName%> = <%=lowerClassName%>;<%=accessHook%>
+      return <%=returnCast%><%=lowerClassName%>;
+   }
 }
 <%=getModifiers%> <%=variableTypeName%> get<%=upperClassName%>() { return get<%=upperClassName%>(true); }

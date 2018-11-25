@@ -14,11 +14,11 @@
            <%=lowerClassName%>.add((org.apache.wicket.behavior.IBehavior) _child);
      }
   <% } %>
-  if (doInit) {
-     <%=lowerClassName%>.init();
-     <%=lowerClassName%>.start();
-  }
-  return <%=lowerClassName%>;
+   if (doInit) {
+       <%=lowerClassName%>.init();
+       <%=lowerClassName%>.start();
+   }
+   return <%=lowerClassName%>;
 }
 
 <%=getModifiers%> <%=variableTypeName%> new<%=upperClassName%>(<%=constructorDecls%>) { return new<%=upperClassName%>(true<%=nextConstructorParams%>); }
