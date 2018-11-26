@@ -9,11 +9,12 @@
    <%=variableTypeName%> <%=lowerClassName%> = super.get<%=upperClassName%>();\
 <% } %>
    if (<%=lowerClassName%> == null) {
-   <%=lowerClassName%> = <% if (typeIsComponentClass) { %><%=typeClassName%>.new<%=typeBaseName%>(false)<% } else { %>new <%=typeName%>()<% } %>;
+      <%variableTypeName%> = _<%=lowerClassName%> = <% if (typeIsComponentClass) { %><%=typeClassName%>.new<%=typeBaseName%>(false)<% } else { %>new <%=typeName%>()<% } %>;
+      <%=lowerClassName%> = _<%=lowerClassName%>;
 <% if (overrideGet) { %>
-      set<%=upperClassName%>(<%=lowerClassName%>);
+      set<%=upperClassName%>(_<%=lowerClassName%>);
 <% } %>
-     <%=lowerClassName%>.preInit();
+     _<%=lowerClassName%>.preInit();
      <%=propertyAssignments%>
      <% if (numChildren > 0) { %>
      Object[] _children = new Object[] {<%=childrenNames%>};
@@ -23,7 +24,7 @@
             // First see if there's a root node defined for this widget.  If so, it goes in that element, not the panel
             com.google.gwt.user.client.ui.RootPanel panel = com.google.gwt.user.client.ui.RootPanel.get("<%= typePathName %>");
             if (panel == null) {
-                <%=lowerClassName%>.add(_cw);
+                _<%=lowerClassName%>.add(_cw);
             }
             else 
                 panel.add(_cw);
@@ -31,14 +32,14 @@
       }
       <% } %>
       if (doInit) {
-        <%=lowerClassName%>.init();
-        <%=lowerClassName%>.start();
+         _<%=lowerClassName%>.init();
+         _<%=lowerClassName%>.start();
       }
-      return <%=lowerClassName%>;
+      return _<%=lowerClassName%>;
    }
    else {
-      <%=variableTypeName%> _<%=lowerClassName%> = <%=lowerClassName%>;<%=accessHook%>
-      return <%=returnCast%><%=lowerClassName%>;
+      <%=variableTypeName%> _<%=lowerClassName%> = <%=returnCast%><%=lowerClassName%>;<%=accessHook%>
+      return _<%=lowerClassName%>;
    }
 }
 <%=getModifiers%> <%=variableTypeName%> get<%=upperClassName%>() { return get<%=upperClassName%>(true); }

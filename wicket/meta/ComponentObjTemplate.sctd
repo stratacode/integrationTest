@@ -6,31 +6,31 @@
    <%=variableTypeName%> <%=lowerClassName%> = super.get<%=upperClassName%>();
 <% } %>
    if (<%=lowerClassName%> == null) {
-      <%=variableTypeName%> _t = <%=lowerClassName%> = <% if (typeIsComponentClass) { %><%=typeClassName%>.new<%=typeBaseName%>(false, "<%=lowerClassName%>")<% } else { %>new <%=typeName%>("<%=lowerClassName%>")<% } %>;
-
+      <%=variableTypeName%> _<%=lowerClassName%> = <% if (typeIsComponentClass) { %><%=typeClassName%>.new<%=typeBaseName%>(false, "<%=lowerClassName%>")<% } else { %>new <%=typeName%>("<%=lowerClassName%>")<% } %>;
+      <%=lowerClassName%> = _<%=lowerClassName%>;
 <% if (overrideGet) { %>
-      set<%=upperClassName%>(<%=lowerClassName%>);
+      set<%=upperClassName%>(_<%=lowerClassName%>);
 <% } %>
-      _t.preInit();
+      _<%=lowerClassName%>.preInit();
       <%=getDynamicTypeDefinition(lowerClassName, 2)%><%=propertyAssignments%>
       <% if (childrenNames != null && childrenNames.length() > 0) { %>
          java.util.List _children = java.util.Arrays.asList(<%=childrenNames%>);
       <% } %>
       if (doInit) {
-        _t.init();
-        _t.start();
+        _<%=lowerClassName%>.init();
+        _<%=lowerClassName%>.start();
       }
       <% if (childrenNames != null && childrenNames.length() > 0) { %>
          for (Object _child:_children) {
             if (_child instanceof org.apache.wicket.behavior.IBehavior)
-               <%=lowerClassName%>.add((org.apache.wicket.behavior.IBehavior) _child);
+               _<%=lowerClassName%>.add((org.apache.wicket.behavior.IBehavior) _child);
          }
        <% } %>
-       return _t;
+       return _<%=lowerClassName%>;
    }
    else {
-      <%=variableTypeName%> _<%=lowerClassName%> = <%=lowerClassName%>;<%=accessHook%>
-      return <%=returnCast%><%=lowerClassName%>;
+      <%=variableTypeName%> _<%=lowerClassName%> = <%=returnCast%><%=lowerClassName%>;<%=accessHook%>
+      return <%=lowerClassName%>;
    }
 }
 <%=getModifiers%> <%=variableTypeName%> get<%=upperClassName%>() { return get<%=upperClassName%>(true); }
