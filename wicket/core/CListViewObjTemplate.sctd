@@ -8,7 +8,7 @@
 <% } %>
    if (<%=lowerClassName%> == null) {
       <%=variableTypeName%> _<%=lowerClassName%> = <% if (typeIsComponentClass) { %><%=typeClassName%>.new<%=typeBaseName%>(false, "<%=lowerClassName%>")<% } else { %>new <%=typeName%>("<%=lowerClassName%>")<% } %>;
-      <%=lowerClassName> = _<%=lowerClassName%>;
+      <%=lowerClassName%> = _<%=lowerClassName%>;
 <% if (overrideGet) { %>
       set<%=upperClassName%>(_<%=lowerClassName%>);
 <% } %>
