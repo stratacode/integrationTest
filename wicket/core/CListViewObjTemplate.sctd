@@ -29,7 +29,7 @@
          _<%=lowerClassName%>.init();
          _<%=lowerClassName%>.start();
       }
-      return _t;
+      return _<%=lowerClassName%>;
    }
    else {
       <%=variableTypeName%> _<%=lowerClassName%> = <%=returnCast%><%=lowerClassName%>;<%=accessHook%>
