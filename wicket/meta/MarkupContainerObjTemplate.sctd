@@ -12,7 +12,7 @@
 <% if (overrideGet) { %>
       set<%=upperClassName%>(_<%=lowerClassName%>);
 <% } %>
-     _t.preInit();
+     _<%=lowerClassName%>.preInit();
      <%=getDynamicTypeDefinition("_" + lowerClassName, 2)%><%=propertyAssignments%>
      <% if (childrenNames != null && childrenNames.length() > 0) { %>
         java.util.List _children = java.util.Arrays.asList(<%=childrenNames%>);
