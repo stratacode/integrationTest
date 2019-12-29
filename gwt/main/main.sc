@@ -46,7 +46,7 @@ public gwt.main extends lib, meta, jreStub {
       // Need to run from the build dir (now that we do not extend jetty)
       system.options.runFromBuildDir = true;
 
-      String rtSrcDir = system.getStrataCodeRuntimePath(true, true);
+      String rtSrcDir = system.getStrataCodeRuntimePath(RuntimeModuleType.CoreRuntime, true);
       if (rtSrcDir != null)
          system.addSystemClassDir(rtSrcDir);
       else

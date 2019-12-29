@@ -12,7 +12,7 @@ public class WicketBindingManager extends BindingManager {
    public void sendEvent(IListener listener, int event, Object obj, IBeanMapper prop, Object eventDetail) {
       BindingContext ctx = BindingContext.getBindingContext();
       if (ctx != null && ctx.getDefaultSyncType() == IListener.SyncType.QUEUED)
-         ctx.queueEvent(event, obj, prop, listener, eventDetail);
+         ctx.queueEvent(event, obj, prop, listener, eventDetail, null);
       else
          super.sendEvent(listener, event, obj, prop, eventDetail);
    }
