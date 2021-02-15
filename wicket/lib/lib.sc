@@ -85,7 +85,7 @@ public wicket.lib extends jetty.servlet, lang, log4j.core {
       htmlFileProcessor.definedInLayer = null;    
 
 /*
-      sc.repos.RepositoryPackage pkg = addRepositoryPackage("wicketLibs", "scp", "vsgit@stratacode.com:/home/vsgit/wicketLibs", false);
+      sc.repos.RepositoryPackage pkg = addRepositoryPackage("wicketLibs", "scp", "vsgit@stratacode.com:/home/vsgit/wicketLibs", false, false);
       if (pkg.installedRoot != null && !disabled) {
          classPath=sc.util.FileUtil.listFiles(pkg.installedRoot,".*\\.jar");
       }

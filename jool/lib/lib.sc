@@ -1,4 +1,8 @@
 jool.lib {
+   // With Java8 this was in the standard rt but it moved in Java 11
+   object annotationPkg extends MvnRepositoryPackage {
+     url = "mvn://javax.annotation/javax.annotation-api/1.3.2";
+   }
    object joolPkg extends MvnRepositoryPackage {
       packageName = "org.jooq/jool";
       type = "git-mvn";
