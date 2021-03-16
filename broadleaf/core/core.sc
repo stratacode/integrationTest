@@ -1,4 +1,8 @@
 broadleaf.core {
+   // An optional package for Java11
+   object annotationPkg extends MvnRepositoryPackage {
+     url = "mvn://javax.annotation/javax.annotation-api/1.3.2";
+   }
    object broadLeafPkg extends MvnRepositoryPackage {
       packageName = "broadleaf";
       type = "git-mvn";
@@ -16,6 +20,6 @@ broadleaf.core {
 
    {
       // Broadleaf currently only compiles with javac -source 1.7
-      layeredSystem.javaSrcVersion = "1.7";
+      layeredSystem.options.javaSrcVersion = "1.7";
    }
 }
